@@ -24,3 +24,14 @@ This is what I've got done for now.
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODY5OSwicHVyIjoiYmxvYl9pZCJ9fQ==--3d57524f617d9997e16f42603f2066b6726e1d9a/image.png)
   
 
+## 11/7/2025 - Change plans  
+
+Switching plans!
+I found out about the 15180 aluminum extrusions (15x180) and they're cheaper, lighter and easier to use than 2x 20100 for the bed.
+Also, I will probably go with linear rails, as they're stiffer than the linear shafts.
+
+This is what I've got.
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE4NSwicHVyIjoiYmxvYl9pZCJ9fQ==--104f19ad62c9b7b54b95ac3a810353334fbe986e/image.png)
+  
+
