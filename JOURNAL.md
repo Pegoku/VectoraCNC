@@ -35,3 +35,15 @@ This is what I've got.
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE4NSwicHVyIjoiYmxvYl9pZCJ9fQ==--104f19ad62c9b7b54b95ac3a810353334fbe986e/image.png)
   
 
+## 11/8/2025 - Switch to linear rails, and restructure the base  
+
+I've modified the base so it now uses 2x mgn15H rails instead of the linear shafts.
+I've also mostly finished the base structure.
+
+The main problem with using Linear rails is I have no way to mount them to the bed, so I will have to drill the aluminum bed so I can screw it to the blocks. Hope it goes well.
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTM2NiwicHVyIjoiYmxvYl9pZCJ9fQ==--595fe6b743c5c149a41f764e61d0c21c3b9d9820/image.png)
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTM2NSwicHVyIjoiYmxvYl9pZCJ9fQ==--a4078faffe023b0dc535e1bc58f491cf0d3a58db/image.png)
+  
+
