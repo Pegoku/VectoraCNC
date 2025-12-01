@@ -79,6 +79,7 @@ TBD
 - **Stepper Motors**: NEMA 17 with TMC2209 Drivers
 - **Motion System**: Linear rail guided on all axes
 - **Control Board**: BIGTREETECH SKR V1.4
+- **Firmware**: Marlin CNC Firmware
 
 ## License
 
