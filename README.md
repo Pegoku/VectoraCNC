@@ -32,7 +32,7 @@ TBD
 
 | Item                  | Qtty needed | Qtty / Pack | Pack Qtty | Price / pack | Source                                                | Extra           | Category    | Item Total | Final Total | Final Total ($) |
 | --------------------- | ----------- | ----------- | --------- | ------------ | ----------------------------------------------------- | --------------- | ----------- | ---------- | ----------- | --------------- |
-| Stepper Motor Nema 17 | 3           | 1           | 3         | 7.69€        | https://www.aliexpress.com/item/1005008459399126.html |                 | Motor       | 23.07€     | 329.95€     | $383.22         |
+| Stepper Motor Nema 17 | 3           | 1           | 3         | 7.69€        | https://www.aliexpress.com/item/1005008459399126.html |                 | Motor       | 23.07€     | 333.31€     | $386.81         |
 | USB B cable           | 0           | 1           | 0         | 1.65€        | https://es.aliexpress.com/item/32700175631.html       |                 | Electronics | 0.00€      |             |                 |
 | MainBoard             | 1           | 1           | 1         | 38.79€       | https://es.aliexpress.com/item/1005006046426892.html  | With TMC2209x5  | Electronics | 38.79€     |             |                 |
 | 15180 extrusion       | 1           | 1           | 1         | 20.99€       | https://www.aliexpress.com/item/1005007601829278.html | 300 mm          | Bed         | 20.99€     |             |                 |
@@ -65,7 +65,7 @@ TBD
 | M6 screw              | 20          | 10          | 2         | 2.05€        | https://www.aliexpress.com/item/1005003189489793.html | 25 mm, ISO4762  | screws      | 4.10€      |             |                 |
 | M3 T-Nut              | 90          | 100         | 1         | 4.39€        | https://www.aliexpress.com/item/1005007383347166.html | 2020-M3-50PCS   | screws      | 4.39€      |             |                 |
 | M5 T-Nut              | 42          | 50          | 1         | 2.99€        | https://www.aliexpress.com/item/1005007383347166.html | 2020-M5-50PCS   | screws      | 2.99€      |             |                 |
-| Corner Bracket        | 4           | 20          | 1         | 3.36€        | https://www.aliexpress.com/item/1005007540068610.html | 2020            | Structure   | 0          |             |                 |
+| Corner Bracket        | 4           | 20          | 1         | 3.36€        | https://www.aliexpress.com/item/1005007540068610.html | 2020            | Structure   | 3.36€      |             |                 |
 | Shipping              | 1           | 1           | 1         | 0.71€        |                                                       |                 |             | 0.71€      |             |                 |
 | Discount code         | 1           | 1           | 1         | -44.27€      |                                                       | IFPUQ5QW        |             | -44.27€    |             |                 |
 
