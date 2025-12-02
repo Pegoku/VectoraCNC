@@ -1243,7 +1243,7 @@
 
 // @section motion
 
-#define AXIS_RELATIVE_MODES { false, false, false, false }
+#define AXIS_RELATIVE_MODES { false, false, false }
 
 // Add a Duplicate option for well-separated conjoined nozzles
 //#define MULTI_NOZZLE_DUPLICATION
@@ -3666,6 +3666,8 @@
 
   #define SPINDLE_LASER_USE_PWM                // Enable if your controller supports setting the speed/power
   #define SPINDLE_LASER_PWM_PIN         P2_03  // FAN0 pin on BTT SKR V1.4 for PWM to 0-10V adapter
+  #undef FAN0_PIN                              // Disable FAN0 since we're using its pin for spindle
+  #define FAN0_PIN                      -1
   #if ENABLED(SPINDLE_LASER_USE_PWM)
     #define SPINDLE_LASER_PWM_INVERT    false  // Set to "true" if the speed/power goes up when you want it to go slower
     #define SPINDLE_LASER_FREQUENCY     1000   // (Hz) Spindle/laser frequency - 1kHz for typical 0-10V PWM adapters
