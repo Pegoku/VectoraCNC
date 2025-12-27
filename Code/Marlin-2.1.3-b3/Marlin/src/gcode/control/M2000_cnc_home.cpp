@@ -116,7 +116,10 @@ void GcodeSuite::M2000() {
   planner.synchronize();
 
   // Move to tool setter position
-  SERIAL_ECHOLNF(F("Moving to tool setter at X"), tool_x, F(" Y"), tool_y);
+  SERIAL_ECHOPGM("Moving to tool setter at X");
+  SERIAL_ECHO(tool_x);
+  SERIAL_ECHOPGM(" Y");
+  SERIAL_ECHOLN(tool_y);
   do_blocking_move_to_xy(tool_x, tool_y, travel_fr);
   planner.synchronize();
 
@@ -143,8 +146,10 @@ void GcodeSuite::M2000() {
   // Calculate and report tool length offset
   const float tool_length = z_before_probe - z_probe_result;
   
-  SERIAL_ECHOLNF(F("Tool probe complete. Z stopped at: "), z_probe_result);
-  SERIAL_ECHOLNF(F("Tool length measured: "), tool_length);
+  SERIAL_ECHOPGM("Tool probe complete. Z stopped at: ");
+  SERIAL_ECHOLN(z_probe_result);
+  SERIAL_ECHOPGM("Tool length measured: ");
+  SERIAL_ECHOLN(tool_length);
   
   //Set Z=0 at current position (tool setter surface = Z0)
   // Or optionally, lift slightly and set that as Z reference
@@ -159,9 +164,12 @@ void GcodeSuite::M2000() {
   // User can use G92 Z<value> to set their preferred Z origin
   
   SERIAL_ECHOLNPGM("CNC Homing Complete!");
-  SERIAL_ECHOLNF(F("Current position: X"), current_position.x, 
-                 F(" Y"), current_position.y,
-                 F(" Z"), current_position.z);
+  SERIAL_ECHOPGM("Current position: X");
+  SERIAL_ECHO(current_position.x);
+  SERIAL_ECHOPGM(" Y");
+  SERIAL_ECHO(current_position.y);
+  SERIAL_ECHOPGM(" Z");
+  SERIAL_ECHOLN(current_position.z);
   SERIAL_ECHOLNPGM("Use G92 Z<value> to set Z origin if needed.");
 }
 
