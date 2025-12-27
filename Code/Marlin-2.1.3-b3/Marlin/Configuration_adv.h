@@ -3835,15 +3835,23 @@
  *   3. Home Y axis
  *   4. Raise Z for clearance
  *   5. Move to tool setter position
- *   6. Probe Z down for tool length measurement
+ *   6. Probe Z (no tool) - establish reference
+ *   7. Move to tool change position
+ *   8. Wait for user to insert tool (M108 to continue)
+ *   9. Return to tool setter and probe again
+ *  10. Calculate and report tool length offset
  *
- * Usage: M2000 [X<pos>] [Y<pos>] [F<feedrate>] [S<slow_feedrate>]
+ * Usage: M2000 [X<pos>] [Y<pos>] [F<feedrate>] [S<slow_feedrate>] [R]
+ *   R - Skip reference probe (re-measure tool only)
  */
 #define CNC_HOMING_ROUTINE
 #if ENABLED(CNC_HOMING_ROUTINE)
   #define CNC_TOOL_SETTER_X_OFFSET   -5     // (mm) X offset from X_MAX_POS for tool setter
   #define CNC_TOOL_SETTER_Y_OFFSET   15     // (mm) Y offset from Y_MAX_POS for tool setter
+  #define CNC_TOOL_CHANGE_X_OFFSET   -50    // (mm) X offset from tool setter for tool change position
+  #define CNC_TOOL_CHANGE_Y_OFFSET   -30    // (mm) Y offset from tool setter for tool change position
   #define CNC_Z_CLEARANCE            10     // (mm) Z clearance before XY travel
+  #define CNC_Z_PROBE_HEIGHT         50     // (mm) Safe Z height for travel moves
   #define CNC_PROBE_FEEDRATE         300    // (mm/min) Z probing feedrate
   #define CNC_TRAVEL_FEEDRATE        3000   // (mm/min) XY travel feedrate
 #endif
