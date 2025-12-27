@@ -1149,6 +1149,10 @@ void GcodeSuite::process_parsed_command(bool no_ok/*=false*/) {
         case 7219: M7219(); break;                                // M7219: Set LEDs, columns, and rows
       #endif
 
+      #if ENABLED(CNC_HOMING_ROUTINE)
+        case 2000: M2000(); break;                                // M2000: CNC Homing with tool length probing
+      #endif
+
       #if ENABLED(HAS_MCP3426_ADC)
         case 3426: M3426(); break;                                // M3426: Read MCP3426 ADC (over i2c)
       #endif

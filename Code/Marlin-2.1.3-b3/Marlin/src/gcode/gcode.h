@@ -1345,6 +1345,10 @@ private:
     static void M7219();
   #endif
 
+  #if ENABLED(CNC_HOMING_ROUTINE)
+    static void M2000();
+  #endif
+
   #if ENABLED(CONTROLLER_FAN_EDITABLE)
     static void M710();
     static void M710_report(const bool forReplay=true);

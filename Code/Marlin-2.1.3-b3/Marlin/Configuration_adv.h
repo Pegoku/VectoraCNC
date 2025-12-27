@@ -3826,6 +3826,29 @@
 #endif // SPINDLE_FEATURE || LASER_FEATURE
 
 /**
+ * CNC Homing Routine (M2000)
+ *
+ * Custom homing sequence optimized for CNC machines with tool length probing.
+ * Adds the M2000 G-code command which performs:
+ *   1. Stop spindle (safety)
+ *   2. Home X axis
+ *   3. Home Y axis
+ *   4. Raise Z for clearance
+ *   5. Move to tool setter position
+ *   6. Probe Z down for tool length measurement
+ *
+ * Usage: M2000 [X<pos>] [Y<pos>] [F<feedrate>] [S<slow_feedrate>]
+ */
+#define CNC_HOMING_ROUTINE
+#if ENABLED(CNC_HOMING_ROUTINE)
+  #define CNC_TOOL_SETTER_X_OFFSET   -5     // (mm) X offset from X_MAX_POS for tool setter
+  #define CNC_TOOL_SETTER_Y_OFFSET   15     // (mm) Y offset from Y_MAX_POS for tool setter
+  #define CNC_Z_CLEARANCE            10     // (mm) Z clearance before XY travel
+  #define CNC_PROBE_FEEDRATE         300    // (mm/min) Z probing feedrate
+  #define CNC_TRAVEL_FEEDRATE        3000   // (mm/min) XY travel feedrate
+#endif
+
+/**
  * Synchronous Laser Control with M106/M107
  *
  * Marlin normally applies M106/M107 fan speeds at a time "soon after" processing
