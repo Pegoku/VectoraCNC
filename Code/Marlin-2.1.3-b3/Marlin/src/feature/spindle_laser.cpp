@@ -145,15 +145,21 @@ void SpindleLaser::init() {
  * @param opwr Power value. Range 0 to MAX.
  */
 void SpindleLaser::apply_power(const uint8_t opwr) {
-  if (enabled() || opwr == 0) {                                   // 0 check allows us to disable where no ENA pin exists
+  #if ENABLED(SPINDLE_LASER_USE_PWM) && defined(SPINDLE_LASER_PWM_MAX)
+    const uint8_t pwr = opwr > SPINDLE_LASER_PWM_MAX ? uint8_t(SPINDLE_LASER_PWM_MAX) : opwr;
+  #else
+    const uint8_t pwr = opwr;
+  #endif
+
+  if (enabled() || pwr == 0) {                                    // 0 check allows us to disable where no ENA pin exists
     // Test the last power used to improve performance
-    if (opwr == last_power_applied) return;
+    if (pwr == last_power_applied) return;
     // Handle PWM driven or just simple on/off
     #if ENABLED(SPINDLE_LASER_USE_PWM)
       if (CUTTER_UNIT_IS(RPM) && unitPower == 0)
         ocr_off();
-      else if (ENABLED(CUTTER_POWER_RELATIVE) || enabled() || opwr == 0) {
-        set_ocr(opwr);
+      else if (ENABLED(CUTTER_POWER_RELATIVE) || enabled() || pwr == 0) {
+        set_ocr(pwr);
         isReadyForUI = true;
       }
       else
@@ -164,7 +170,7 @@ void SpindleLaser::apply_power(const uint8_t opwr) {
       WRITE(SPINDLE_LASER_ENA_PIN, enabled() ? SPINDLE_LASER_ACTIVE_STATE : !SPINDLE_LASER_ACTIVE_STATE);
       isReadyForUI = true;
     #endif
-    last_power_applied = opwr;
+    last_power_applied = pwr;
   }
   else {
     #if PIN_EXISTS(SPINDLE_LASER_ENA)
