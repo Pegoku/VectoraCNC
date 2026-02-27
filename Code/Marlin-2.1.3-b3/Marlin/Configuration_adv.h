@@ -3702,7 +3702,7 @@
    *  - RPM     (S0 - S50000)  Best for use with a spindle
    *  - SERVO   (S0 - S180)
    */
-  #define CUTTER_POWER_UNIT PWM255
+  #define CUTTER_POWER_UNIT RPM
 
   /**
    * Relative Cutter Power
@@ -3734,8 +3734,8 @@
     #if ENABLED(SPINDLE_LASER_USE_PWM)
       #define SPEED_POWER_INTERCEPT       0    // (%) 0-100 i.e., Minimum power percentage
       #define SPEED_POWER_MIN             0    // (RPM) Allow true 0% PWM at low S values
-      #define SPEED_POWER_MAX         30000    // (RPM) SuperPID router controller 0 - 30,000 RPM
-      #define SPEED_POWER_STARTUP     25000    // (RPM) M3/M4 speed/power default (with no arguments)
+      #define SPEED_POWER_MAX         12000    // (RPM) Spindle maximum speed
+      #define SPEED_POWER_STARTUP     10000    // (RPM) M3/M4 speed/power default (with no arguments)
 
       //#define DEFAULT_ACCELERATION_SPINDLE   1000 // (°/s/s) Default spindle acceleration (speed change with time)
     #endif

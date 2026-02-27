@@ -146,7 +146,8 @@ void SpindleLaser::init() {
  */
 void SpindleLaser::apply_power(const uint8_t opwr) {
   #if ENABLED(SPINDLE_LASER_USE_PWM) && defined(SPINDLE_LASER_PWM_MAX)
-    const uint8_t pwr = opwr > SPINDLE_LASER_PWM_MAX ? uint8_t(SPINDLE_LASER_PWM_MAX) : opwr;
+    // Scale 0..255 input down to 0..SPINDLE_LASER_PWM_MAX to preserve linear output mapping.
+    const uint8_t pwr = uint8_t((uint16_t(opwr) * uint16_t(SPINDLE_LASER_PWM_MAX) + 127U) / 255U);
   #else
     const uint8_t pwr = opwr;
   #endif
