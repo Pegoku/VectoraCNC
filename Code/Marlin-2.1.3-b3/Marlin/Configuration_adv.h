@@ -3521,7 +3521,9 @@
 
   // @section tmc/config
 
-     */
+  /**
+   * Step on both rising and falling edge signals (as with a square wave).
+   */
   #define EDGE_STEPPING
 
   /**
