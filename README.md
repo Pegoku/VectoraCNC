@@ -3,7 +3,11 @@
 VectoraCNC is a custom-designed desktop CNC machine. Built using mainly 2020 and 2040 aluminum extrusions, linear rails, and NEMA 17 stepper motors, this CNC aims to deliver reliable performance in a compact design while maintaining a budget build cost of approximately $400.
 Simple Desktop CNC
 
-This design aims to deliver a reliable CNC machine for makers, foccused on affordability, while being a future-proof platform for upgrades and modifications.
+This design aims to deliver a reliable CNC machine for makers, focused on affordability, while being a future-proof platform for upgrades and modifications.
+
+## Why I Built This
+
+I wanted a rigid desktop CNC to be able to machine some hard materials without spending $1000+. Most budget machines use wheels instead of linear rails, that's why VectoraCNC uses linear rails on all axes while keeping the total cost around $400.
 
 ## Images
 
@@ -22,7 +26,7 @@ This design aims to deliver a reliable CNC machine for makers, foccused on affor
 - Rigid Frame with 2020 and 2040 Aluminum Extrusions
 - Linear Rail Motion System for Precision
 - NEMA 17 Stepper Motors with Microstepping Drivers
-- 15180 T-Slot Aluminum Base
+- 15180 Aluminum Plate
 
 ## BOM (Bill of Materials)
 
@@ -30,8 +34,8 @@ This design aims to deliver a reliable CNC machine for makers, foccused on affor
 
 ## Design Specifications
 
-- **Build Volume**: 230 mm 160 x 80 mm
-- **Bed Type**: 15180 x 300mm Aluminum Extrusion
+- **Build Volume**: 230 x 160 x 80 mm
+- **Bed Type**: 15180 300 mm T-Slot Aluminum Plate
 - **Spindle**: 500W ER11 Collet Spindle
 - **Stepper Motors**: NEMA 17 with TMC2209 Drivers
 - **Motion System**: Linear rail guided on all axes
