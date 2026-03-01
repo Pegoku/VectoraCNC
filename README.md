@@ -38,6 +38,9 @@ This design aims to deliver a reliable CNC machine for makers, foccused on affor
 - **Control Board**: BIGTREETECH SKR V1.4
 - **Firmware**: Marlin CNC Firmware
 
+## Wiring Diagram
+![Wiring Diagram](media/wiring.png)
+
 ## License
 
 This work is licensed under a
